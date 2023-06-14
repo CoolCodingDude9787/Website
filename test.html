@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing</title>
+</head>
+<body>
+    <img id="image_1"class="w-1/4 hidden" src="Image.jpg">
+    <img id="image_2"class="w-1/4" src="Lassen.jpg">
+    <button id="button1" class="bg-yellow-700 rounded-xl px-2 m-4">   click this   </button>
+</body>
+
+<script>
+    const button1 = document.getElementById("button1")
+    console.log(button1)
+    const image_1 = document.getElementById("image_1")
+    console.log(image_1)
+    button1.addEventListener("" , e => {
+        image_1.classList.toggle("hidden")
+    } )
+</script>
+</html>
+<html lang="en">
+<head>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing</title>
+</head>
+<body x-data="{image_1: false}">
+    <img x-show="image_1" class="w-1/4" src="Image.jpg">
+    <img class="w-1/4" src="Lassen.jpg">
+    <button @click="image_1 = !image_1" class="bg-yellow-700 rounded-xl px-2 m-4">   click this   </button>
+</body>
+</html>

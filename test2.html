@@ -1,0 +1,15 @@
+<html lang="en">
+<head>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing</title>
+</head>
+<body x-data="{image_1: true, image_2: true}">
+    <img x-show="image_1" class="w-1/4" src="Image.jpg">
+    <img x-show="image_2" class="w-1/4" src="Lassen.jpg">
+    <button @click="image_1 = !image_1" class="bg-yellow-700 rounded-xl px-2 m-4">   click this   </button>
+    <button @click="image_2 = !image_2" class="bg-green-700 rounded-xl px-4 m-4">Click this first</button>
+</body>
+</html>
